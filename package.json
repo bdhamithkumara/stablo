@@ -1,6 +1,6 @@
 {
-  "name": "stablo-free",
-  "version": "3.0.0",
+  "name": "project-oikia",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -23,6 +23,8 @@
     "@sanity/types": "^3.26.0",
     "@sanity/ui": "^2.0.1",
     "@sanity/vision": "^3.26.0",
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.49.1",
     "@tailwindcss/typography": "^0.5.10",
     "@vercel/og": "^0.6.2",
     "@web3forms/react": "^1.1.3",

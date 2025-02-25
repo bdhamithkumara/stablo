@@ -1,10 +1,10 @@
 'use server'
 
-import { createClientForServer } from '@/utils/supabase/server'
+import { createClient } from '@/utils/supabase/server'
 import { redirect } from 'next/navigation'
 
 const signInWith = provider => async () => {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   const auth_callback_url = `${process.env.SITE_URL}/auth/callback`
 

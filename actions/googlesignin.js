@@ -3,10 +3,10 @@
 import { createClient } from '@/utils/supabase/server'
 import { redirect } from 'next/navigation'
 
-const signInWith = provider => async () => {
+const signInWith = provider => async (next = '/dashboard') => {
   const supabase = await createClient()
 
-  const auth_callback_url = `${process.env.SITE_URL}/auth/callback`
+const auth_callback_url = `${process.env.SITE_URL}/callback?next=${encodeURIComponent(next)}`
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider,

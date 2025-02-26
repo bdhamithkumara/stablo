@@ -20,7 +20,7 @@ const DashboardPage = () => {
 
         // Fetch user role from database
         const { data, error } = await supabase
-          .from('profiles')
+          .from('profile')
           .select('role')
           .eq('id', user.id)
           .single()
